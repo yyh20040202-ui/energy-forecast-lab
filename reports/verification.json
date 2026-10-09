@@ -15,7 +15,7 @@
     "Invalid and missing-model requests produce 422 and 503",
     "Offline training, report export and checkpoint loading work together"
   ],
-  "remote_ci_status": "not yet verified",
+  "remote_ci_status": "success",
   "reference_checkpoint_checks": [
     {
       "model": "TCN",
@@ -31,5 +31,11 @@
       "api_matches_checkpoint": true,
       "matches_benchmark_csv": true
     }
-  ]
+  ],
+  "remote_ci": {
+    "tested_commit": "3dfd466e44bc57b1d4d2acae152f33e2de3d0f4b",
+    "run_id": 37900260338,
+    "url": "https://github.com/yyh20040202-ui/energy-forecast-lab/actions/runs/37900260338",
+    "conclusion": "success"
+  }
 }
