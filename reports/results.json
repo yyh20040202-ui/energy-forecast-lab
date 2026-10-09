@@ -1,0 +1,220 @@
+{
+  "schema_version": 1,
+  "data": {
+    "sha256": "2820bf712ad0275cb18b85a05250926100d8e65ebb9f4d2d016ca91ea152a25d",
+    "rows": 19735,
+    "source": "UCI Appliances Energy Prediction, DOI 10.24432/C5VC8G"
+  },
+  "config": {
+    "epochs": 20,
+    "patience": 5,
+    "context": 36,
+    "horizon": 6,
+    "channels": 16,
+    "seed": 42
+  },
+  "partitions": {
+    "train": {
+      "windows": 13773,
+      "first_target": "2016-01-11 23:00:00",
+      "last_target": "2016-04-16 15:10:00"
+    },
+    "validation": {
+      "windows": 2955,
+      "first_target": "2016-04-16 15:20:00",
+      "last_target": "2016-05-07 04:30:00"
+    },
+    "test": {
+      "windows": 2956,
+      "first_target": "2016-05-07 04:40:00",
+      "last_target": "2016-05-27 18:00:00"
+    }
+  },
+  "scaler_fit_rows": 13814,
+  "ridge_alpha": 1000.0,
+  "validation": {
+    "Persistence": {
+      "mae_wh": 42.61477721376198,
+      "rmse_wh": 99.21860531818595,
+      "smape_percent": 31.21643224559625
+    },
+    "Ridge": {
+      "mae_wh": 40.96728198938429,
+      "rmse_wh": 79.03663660109656,
+      "smape_percent": 35.730516177413946
+    },
+    "TCN": {
+      "mae_wh": 38.4675983166466,
+      "rmse_wh": 78.04491169044915,
+      "smape_percent": 32.95581946308278
+    },
+    "TCN-target-only": {
+      "mae_wh": 37.94249583705293,
+      "rmse_wh": 78.4142305158993,
+      "smape_percent": 31.912057985427133
+    }
+  },
+  "test": {
+    "Persistence": {
+      "mae_wh": 39.186400541271986,
+      "rmse_wh": 92.28636840516873,
+      "smape_percent": 26.273970360867526
+    },
+    "Ridge": {
+      "mae_wh": 42.06139332397488,
+      "rmse_wh": 76.23866469505548,
+      "smape_percent": 35.705974369526324
+    },
+    "TCN": {
+      "mae_wh": 48.634821112757066,
+      "rmse_wh": 78.1817714533369,
+      "smape_percent": 41.10539486601073
+    },
+    "TCN-target-only": {
+      "mae_wh": 35.20529195323526,
+      "rmse_wh": 73.94590658692884,
+      "smape_percent": 28.389355086396556
+    }
+  },
+  "test_per_horizon": {
+    "Persistence": [
+      {
+        "mae_wh": 26.66102841677943,
+        "rmse_wh": 66.75369263478156,
+        "smape_percent": 19.71279163182942
+      },
+      {
+        "mae_wh": 34.75304465493911,
+        "rmse_wh": 89.28618596434467,
+        "smape_percent": 22.17031044529566
+      },
+      {
+        "mae_wh": 40.43301759133965,
+        "rmse_wh": 94.63625970461622,
+        "smape_percent": 26.81927883188576
+      },
+      {
+        "mae_wh": 42.249661705006766,
+        "rmse_wh": 96.9924944433801,
+        "smape_percent": 27.95370722273495
+      },
+      {
+        "mae_wh": 44.66847090663058,
+        "rmse_wh": 99.78596851689724,
+        "smape_percent": 29.932970226283157
+      },
+      {
+        "mae_wh": 46.3531799729364,
+        "rmse_wh": 101.74359505130933,
+        "smape_percent": 31.054763807176194
+      }
+    ],
+    "Ridge": [
+      {
+        "mae_wh": 28.55654229717745,
+        "rmse_wh": 61.14742222748832,
+        "smape_percent": 23.976520389040253
+      },
+      {
+        "mae_wh": 38.666056822698074,
+        "rmse_wh": 75.11473177098449,
+        "smape_percent": 32.42565793473998
+      },
+      {
+        "mae_wh": 43.21754702953912,
+        "rmse_wh": 77.95074599869842,
+        "smape_percent": 36.7692970367017
+      },
+      {
+        "mae_wh": 45.64578342824892,
+        "rmse_wh": 79.35064117924914,
+        "smape_percent": 38.91793077174013
+      },
+      {
+        "mae_wh": 47.36112681196572,
+        "rmse_wh": 80.54943646786168,
+        "smape_percent": 40.396384060955235
+      },
+      {
+        "mae_wh": 48.92130355422003,
+        "rmse_wh": 81.4353671337907,
+        "smape_percent": 41.75005602398065
+      }
+    ],
+    "TCN": [
+      {
+        "mae_wh": 31.177681673847452,
+        "rmse_wh": 61.01592612179865,
+        "smape_percent": 26.55374150288275
+      },
+      {
+        "mae_wh": 44.591894942142964,
+        "rmse_wh": 75.98941758587507,
+        "smape_percent": 37.81004812918409
+      },
+      {
+        "mae_wh": 50.829727734216014,
+        "rmse_wh": 79.84826870742009,
+        "smape_percent": 43.07905547995484
+      },
+      {
+        "mae_wh": 52.38187545755719,
+        "rmse_wh": 81.11051801701899,
+        "smape_percent": 44.340373083316145
+      },
+      {
+        "mae_wh": 55.06063212496663,
+        "rmse_wh": 83.40930672958083,
+        "smape_percent": 46.406691859961
+      },
+      {
+        "mae_wh": 57.76711474381216,
+        "rmse_wh": 85.23630037888032,
+        "smape_percent": 48.44245914076551
+      }
+    ],
+    "TCN-target-only": [
+      {
+        "mae_wh": 26.117376055220628,
+        "rmse_wh": 59.479966344009384,
+        "smape_percent": 21.224509122005372
+      },
+      {
+        "mae_wh": 31.910015497220545,
+        "rmse_wh": 73.15423300054361,
+        "smape_percent": 24.565013077037147
+      },
+      {
+        "mae_wh": 36.895448287220546,
+        "rmse_wh": 75.25334172935159,
+        "smape_percent": 29.79860328065463
+      },
+      {
+        "mae_wh": 37.59264391459051,
+        "rmse_wh": 76.49857913556002,
+        "smape_percent": 30.427774898408384
+      },
+      {
+        "mae_wh": 38.584488802898235,
+        "rmse_wh": 78.01904078250364,
+        "smape_percent": 31.41785764726673
+      },
+      {
+        "mae_wh": 40.1317791622611,
+        "rmse_wh": 79.47644700021796,
+        "smape_percent": 32.90237249300708
+      }
+    ]
+  },
+  "runtime_seconds": 42.08,
+  "environment": {
+    "python": "3.12.14",
+    "torch": "2.5.1+cpu",
+    "numpy": "1.26.4",
+    "pandas": "2.2.3",
+    "sklearn": "1.5.2",
+    "device": "cpu"
+  },
+  "selection_policy": "Ridge alpha and TCN checkpoints use validation only; test reported once",
+  "evaluation": "rolling origin with newly observed true history; overlapping forecast labels"
+}

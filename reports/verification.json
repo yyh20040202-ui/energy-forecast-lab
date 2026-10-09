@@ -1,0 +1,35 @@
+{
+  "local_test_command": "python -m pytest -q",
+  "tests_passed": 13,
+  "tests_failed": 0,
+  "test_data": "synthetic offline fixtures, distinct from the UCI benchmark",
+  "checks": [
+    "Chronological target partitions do not overlap",
+    "Window history excludes future labels",
+    "Scaler ignores holdout values",
+    "Random UCI variables are excluded",
+    "Duplicate timestamps, gaps, NaN and negative energy are rejected",
+    "Causal convolutions cannot read future positions",
+    "Metric edge cases are handled",
+    "Checkpoint inference and API agree",
+    "Invalid and missing-model requests produce 422 and 503",
+    "Offline training, report export and checkpoint loading work together"
+  ],
+  "remote_ci_status": "not yet verified",
+  "reference_checkpoint_checks": [
+    {
+      "model": "TCN",
+      "first_prediction_wh": 53.7696647644043,
+      "horizons": 6,
+      "api_matches_checkpoint": true,
+      "matches_benchmark_csv": true
+    },
+    {
+      "model": "TCN-target-only",
+      "first_prediction_wh": 64.25300598144531,
+      "horizons": 6,
+      "api_matches_checkpoint": true,
+      "matches_benchmark_csv": true
+    }
+  ]
+}
